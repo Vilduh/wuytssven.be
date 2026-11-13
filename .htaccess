@@ -1,0 +1,27 @@
+DirectoryIndex disabled
+RewriteEngine On
+
+# 1. Redirect /index, /index.html, or /html/index.html to /
+RewriteCond %{THE_REQUEST} \s/+(?:html/)?index(?:\.html)?[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+
+# 2. Redirect /html/anything.html or /html/anything to /anything
+RewriteCond %{THE_REQUEST} \s/+html/([^\s.?]+)(?:\.html)?[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# 3. Redirect /page.html to /page
+RewriteCond %{THE_REQUEST} \s/+([^\s.?]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# 4. Serve /html/index.html if it exists there, otherwise serve /index.html from root
+RewriteCond %{DOCUMENT_ROOT}/html/index.html -f
+RewriteRule ^$ /html/index.html [L]
+
+RewriteCond %{DOCUMENT_ROOT}/index.html -f
+RewriteRule ^$ /index.html [L]
+
+# 5. Serve /html/page.html when visiting /page
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/html/$1.html -f
+RewriteRule ^(.+?)/?$ /html/$1.html [L]
