@@ -1,6 +1,6 @@
 # Sven Wuyts - Developer Portfolio
 
-Welkom bij de repository van mijn persoonlijke portfolio website. Deze website is gebouwd als eindproject voor de opleiding Programmeren aan Thomas More, maar is met dezelfde zorg opgebouwd als een professioneel product.
+Welkom bij de repository van mijn persoonlijke portfolio website. Deze website is gebouwd voor de opleiding Programmeren aan Thomas More.
 
 ##  Live Demo
 De website is live te bekijken op: [https://wuytssven.be](https://wuytssven.be)
