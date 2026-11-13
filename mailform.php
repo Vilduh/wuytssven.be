@@ -4,13 +4,13 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
 
-// 1. Block spam bots that fill out the hidden 'website' field
+// 1. voorkomt dat bots emails kunnen sturen, extra onzichtbare form check
 if (!empty($_POST["website"])) {
     header("Location: /contact?status=sent");
     exit;
 }
 
-// 2. Sanitize and validate inputs
+// 2. checks en validatie zodat het formulier correct is
 $name    = strip_tags(trim($_POST["name"] ?? ""));
 $email   = filter_var(trim($_POST["email"] ?? ""), FILTER_SANITIZE_EMAIL);
 $message = strip_tags(trim($_POST["message"] ?? ""));
@@ -20,7 +20,7 @@ if (empty($name) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL
     exit;
 }
 
-// 3. Configure email details (Combell requires the 'From' address to match your domain)
+// 3. details van de email
 $to      = "sven@wuytssven.be";
 $subject = "Portfolio Contact from " . $name;
 
@@ -32,7 +32,7 @@ $headers  = "From: Portfolio Bot <noreply@wuytssven.be>\r\n";
 $headers .= "Reply-To: " . $name . " <" . $email . ">\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-// 4. Send email and redirect back with terminal status
+// 4. verstuurd email en geeft bezoeker feedback
 if (mail($to, $subject, $body, $headers)) {
     header("Location: /contact?status=sent");
 } else {

@@ -71,7 +71,7 @@ figcaption {
 
 body {
     background-color: var(--background-color);
-    background-image: url("../media/pattern.svg");
+    background-image: url("../media/svg-files/pattern.svg");
     background-size: 200px 200px;
     overflow-x: clip;
     font-family: var(--font-sans);
