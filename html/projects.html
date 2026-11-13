@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sven Wuyts ~ Projects</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="canonical" href="https://wuytssven.be">
+    <link rel="icon" type="image/svg+xml" href="/media/favicon.svg">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header>
+    <div class="header-inner">
+        <a href="/" class="logo">Sven Wuyts</a>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="/">Home</a>
+            <a href="/about-me">About me</a>
+            <a href="/internship">Internship</a>
+            <a href="/projects" class="active">Projects</a>
+            <a href="/contact">Contact</a>
+            <a href="/media/cv.pdf" download class="button-outline">Download CV</a>
+        </nav>
+    </div>
+</header>
+
+<main id="main-content">
+    <section class="projects-wrapper" id="projects">
+        <div class="projects-inner">
+            <div class="section-title">
+                <h2>My Projects</h2>
+                <p class="scroll-hint" aria-hidden="true"> drag / scroll →</p>
+            </div>
+
+            <div class="projects-mask">
+                <ul class="projects-container" tabindex="0" role="region" aria-label="Horizontal project carousel">
+
+                    <li>
+                        <article class="project-card">
+                            <figure class="project-image">
+                                <img src="/media/screenshot-portfolio.png" alt="Screenshot of my Portfolio"
+                                     class="project-screenshot">
+
+                                <img src="/media/cat.svg" alt="" class="hidden-cat" aria-hidden="true">
+                            </figure>
+                            <h3>Portfolio site</h3>
+                            <p>
+                                A fully responsive website built with <strong> HTML and CSS</strong>. I designed
+                                a "Cozy Terminal" theme with a warm color palette and a custom svg background.
+                            </p>
+                            <p>
+                                To make the layout, I used <strong>CSS Flexbox</strong> for the rows and
+                                <strong>CSS Grid</strong> for the 2 column layout. I also added accessibility features,
+                                such as a skip link, focus states, and ARIA labels.
+                            </p>
+                            <em>Result: a fast website with good separation between semantic HTML and visual styling. </em>
+
+                            <ul class="project-tags">
+                                <li>html</li><li>css</li><li>seo</li><li>2026</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="/">Source →</a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="project-card">
+                            <figure class="project-image">
+                                <img src="/media/screenshot-wordpress.png" alt="Screenshot of the wordpress server"
+                                     class="project-screenshot">
+
+                                <img src="/media/cat.svg" alt="" class="hidden-cat" aria-hidden="true">
+                            </figure>
+                            <h3>WordPress Web Server</h3>
+                            <p>
+                                A fully functional WordPress website hosted on a virtualized <strong>Ubuntu server</strong>.
+                                I manually installed and configured the <strong>Apache web server, a MySQL database and PHP</strong>
+                                entirely in the command line.
+                            </p>
+                            <p>
+                                I set up <strong>Apache virtual hosts</strong> and linked a custom domain using local DNS routing.
+                                I also created a secure <strong>MySQL database</strong> and fixed a raw PHP code error by installing
+                                the correct modules and adjusting <strong>file permissions</strong> so the web server could safely
+                                read the files.
+                            </p>
+                            <em>Result: a secure WordPress installation and a solid understanding of how server components interact.</em>
+
+                            <ul class="project-tags">
+                                <li>linux</li><li>apache</li><li>mysql</li><li>php</li><li>wordpress</li><li>2026</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="/media/wordpress">Read my report here →</a>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+<footer>
+    <figure class="footer-cat" aria-label="Sleeping cat.">
+        <span class="cat-sleeping" aria-hidden="true">  /\_/\<br /> ( -.- )<br />  &gt; ^ &lt; zZ</span>
+        <span class="cat-awake" aria-hidden="true">  /\_/\<br /> ( o.o )<br />  &gt; ^ &lt;</span>
+        <figcaption class="cat-message" aria-hidden="true">// System initialized</figcaption>
+    </figure>
+
+    <nav class="footer-links" aria-label="Social media">
+        <a href="https://github.com/Vilduh">GitHub</a> ~ <a href="#">LinkedIn</a> ~ <a href="mailto:sven@wuytssven.be">Email</a>
+    </nav>
+
+    <aside class="pattern-legend">
+        <p class="legend-title">/* Background Pattern Legend */</p>
+        <ul class="legend-items">
+            <li class="legend-item"><span class="legend-sym sym-navy">&gt;_</span><span class="legend-label">Terminal</span></li>
+            <li class="legend-item"><span class="legend-sym sym-orange">/\_/\</span><span class="legend-label">Cat Ears</span></li>
+            <li class="legend-item"><span class="legend-sym sym-teal">&lt;/&gt;</span><span class="legend-label">HTML Tag</span></li>
+            <li class="legend-item"><span class="legend-sym sym-purple">~$</span><span class="legend-label">Shell</span></li>
+        </ul>
+    </aside>
+
+    <p>© 2026 Sven Wuyts</p>
+</footer>
+</body>
+</html>

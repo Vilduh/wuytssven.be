@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sven Wuyts ~ Contact</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="canonical" href="https://wuytssven.be">
+    <link rel="icon" type="image/svg+xml" href="/media/favicon.svg">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header>
+    <div class="header-inner">
+        <a href="/" class="logo">Sven Wuyts</a>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="/">Home</a>
+            <a href="/about-me">About me</a>
+            <a href="/internship">Internship</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact" class="active">Contact</a>
+            <a href="/media/cv.pdf" download class="button-outline">Download CV</a>
+        </nav>
+    </div>
+</header>
+
+<main id="main-content">
+    <section id="contact">
+        <div class="contact-container">
+            <div class="section-title">
+                <h2>Get in touch</h2>
+            </div>
+            <p>Whether you have a question, a project idea, or just want to say hi, my inbox is always open.</p>
+
+            <form action="mailform.php" method="post">
+                <div class="form-group">
+                    <label for="name">~ $ enter_name</label>
+                    <input type="text" id="name" name="name" placeholder="Sven Wuyts" aria-label="Your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">~ $ enter_email</label>
+                    <input type="email" id="email" name="email" placeholder="sven@example.com" aria-label="Your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">~ $ enter_message</label>
+                    <textarea name="message" id="message" placeholder="Hello Sven..." aria-label="Your message" required></textarea>
+                </div>
+
+                <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
+
+                <button type="submit">./send_message.sh</button>
+            </form>
+            <p id="form-status" class="terminal-output"></p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <figure class="footer-cat" aria-label="Sleeping cat.">
+        <span class="cat-sleeping" aria-hidden="true">  /\_/\<br /> ( -.- )<br />  &gt; ^ &lt; zZ</span>
+        <span class="cat-awake" aria-hidden="true">  /\_/\<br /> ( o.o )<br />  &gt; ^ &lt;</span>
+        <figcaption class="cat-message" aria-hidden="true">// System initialized</figcaption>
+    </figure>
+
+    <nav class="footer-links" aria-label="Social media">
+        <a href="https://github.com/Vilduh">GitHub</a> ~ <a href="#">LinkedIn</a> ~ <a href="mailto:sven@wuytssven.be">Email</a>
+    </nav>
+
+    <aside class="pattern-legend">
+        <p class="legend-title">/* Background Pattern Legend */</p>
+        <ul class="legend-items">
+            <li class="legend-item"><span class="legend-sym sym-navy">&gt;_</span><span class="legend-label">Terminal</span></li>
+            <li class="legend-item"><span class="legend-sym sym-orange">/\_/\</span><span class="legend-label">Cat Ears</span></li>
+            <li class="legend-item"><span class="legend-sym sym-teal">&lt;/&gt;</span><span class="legend-label">HTML Tag</span></li>
+            <li class="legend-item"><span class="legend-sym sym-purple">~$</span><span class="legend-label">Shell</span></li>
+        </ul>
+    </aside>
+
+    <p>© 2026 Sven Wuyts</p>
+</footer>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const statusEl = document.getElementById("form-status");
+
+    if (params.get("status") === "sent") {
+        statusEl.textContent = "> [OK] Message transmitted successfully.";
+        statusEl.classList.add("status-ok");
+    } else if (params.get("status") === "error") {
+        statusEl.textContent = "> [ERR] Transmission failed. Check your inputs and try again.";
+        statusEl.classList.add("status-err");
+    }
+</script>
+</body>
+</html>

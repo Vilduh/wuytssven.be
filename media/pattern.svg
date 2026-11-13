@@ -1,0 +1,22 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        text {
+        font-family: 'Courier New', monospace;
+        font-size: 18px;
+        font-weight: 900;
+        }
+        .navy { fill: rgba(30, 47, 63, 0.06); }
+        .orange { fill: rgba(230, 81, 0, 0.10); }
+        .teal { fill: rgba(0, 128, 128, 0.08); }
+        .purple { fill: rgba(110, 50, 150, 0.07); }
+    </style>
+
+    <text x="10" y="40" class="navy">&gt;_</text>
+    <text x="110" y="40" class="orange">/\_/\</text>
+
+    <text x="20" y="110" class="teal">&lt;/&gt;</text>
+    <text x="120" y="110" class="purple">~$</text>
+
+    <text x="10" y="180" class="navy">&gt; ^ &lt;</text>
+    <text x="110" y="180" class="purple">&gt;&lt;&gt;</text>
+</svg>

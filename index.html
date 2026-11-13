@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sven Wuyts ~ Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="icon" type="image/svg+xml" href="/media/favicon.svg">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header>
+    <div class="header-inner">
+        <a href="/" class="logo">Sven Wuyts</a>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="/" class="active">Home</a>
+            <a href="/about-me">About me</a>
+            <a href="/internship">Internship</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+            <a href="/media/cv.pdf" download class="button-outline">Download CV</a>
+        </nav>
+    </div>
+</header>
+
+<main id="main-content">
+    <section class="hero">
+        <div class="hero-text">
+            <p class="hero-prompt">~ $ whoami</p>
+            <h1>Hi, I'm Sven, <br>Developer in Progress&nbsp;<span class="highlight">_</span></h1>
+            <p class="hero-subtext">
+                <span>Still building: first in Minecraft, now in code.</span><br>
+                <span>
+                        Studying at <a
+                        href="https://thomasmore.be/nl/opleidingen/graduaat/programmeren/sint-katelijne-waver/basistraject"
+                        target="_blank" class="handle-link">@ThomasMore</a>
+                        <span class="pulsing-dot" aria-hidden="true"></span> Currently breaking things (and fixing them)
+                    </span>
+            </p>
+            <a href="/media/cv.pdf" download class="button-solid">Download my CV (PDF)</a>
+        </div>
+
+        <figure class="hero-ascii" aria-label="Terminal view with an ASCII cat">
+<pre aria-hidden="true">
+<span class="prompt">   &gt; sven --status   </span>
+
+<span class="cat">       /\_/\          </span>
+<span class="cat" id="cat-eyes">      ( o.o )         </span>
+<span class="cat">       > ^ <          </span>
+
+<span class="load">   [██████░░] 80%     </span>
+<span class="sub" id="cat-status">   Compiling...       </span>
+</pre>
+        </figure>
+    </section>
+
+    <section class="home-projects">
+        <div class="section-title">
+            <h2>Featured Projects</h2>
+            <p class="scroll-hint" aria-hidden="true">select a project ↓</p>
+        </div>
+
+        <div class="home-projects-grid">
+            <a href="html/projects.html" class="home-projects-card">
+                <h3>Portfolio Site</h3>
+                <p class="card-link">View projects →</p>
+                <div class="card-tags">html ~ css ~ seo</div>
+            </a>
+
+            <a href="html/projects.html" class="home-projects-card">
+                <h3>WordPress Web Server</h3>
+                <p class="card-link">View projects →</p>
+                <div class="card-tags">linux ~ apache ~ mysql ~ php ~ wordpress</div>
+            </a>
+
+            <a href="html/projects.html" class="home-projects-card">
+                <h3>All Projects</h3>
+                <p class="card-link">Go to overview →</p>
+                <div class="card-tags">html ~ css ~ linux ~ and more</div>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <figure class="footer-cat" aria-label="Sleeping cat.">
+        <span class="cat-sleeping" aria-hidden="true">  /\_/\<br /> ( -.- )<br />  &gt; ^ &lt; zZ</span>
+        <span class="cat-awake" aria-hidden="true">  /\_/\<br /> ( o.o )<br />  &gt; ^ &lt;</span>
+        <figcaption class="cat-message" aria-hidden="true">// System initialized</figcaption>
+    </figure>
+
+    <nav class="footer-links" aria-label="Social media">
+        <a href="https://github.com/Vilduh">GitHub</a> ~ <a href="#">LinkedIn</a> ~ <a href="mailto:sven@wuytssven.be">Email</a>
+    </nav>
+
+    <aside class="pattern-legend">
+        <p class="legend-title">/* Background Pattern Legend */</p>
+        <ul class="legend-items">
+            <li class="legend-item"><span class="legend-sym sym-navy">&gt;_</span><span class="legend-label">Terminal</span></li>
+            <li class="legend-item"><span class="legend-sym sym-orange">/\_/\</span><span class="legend-label">Cat Ears</span></li>
+            <li class="legend-item"><span class="legend-sym sym-teal">&lt;/&gt;</span><span class="legend-label">HTML Tag</span></li>
+            <li class="legend-item"><span class="legend-sym sym-purple">~$</span><span class="legend-label">Shell</span></li>
+        </ul>
+    </aside>
+
+    <p>© 2026 Sven Wuyts</p>
+
+    <a href="/404.html"
+       style="display: block; margin-top: 1rem; font-size: 0.65rem; color: #8899a6; opacity: 0.15; text-decoration: none; transition: all 0.3s;"
+       onmouseover="this.style.opacity='1'; this.style.color='var(--accent)';"
+       onmouseout="this.style.opacity='0.15'; this.style.color='#8899a6';"
+       title="Test the 404 page">
+        &gt; sys_diagnostic
+    </a>
+</footer>
+
+<script>
+    const catEyes = document.getElementById('cat-eyes');
+    const catStatus = document.getElementById('cat-status');
+    let idleTimer;
+
+    function resetIdleTimer() {
+        clearTimeout(idleTimer);
+        if (catEyes && catStatus) {
+            catEyes.textContent = "      ( o.o )         ";
+            catStatus.textContent = "   Compiling...       ";
+        }
+        idleTimer = setTimeout(() => {
+            if (catEyes && catStatus) {
+                catEyes.textContent = "      ( -.- )         ";
+                catStatus.textContent = "   zzZ...             ";
+            }
+        }, 20000);
+    }
+
+    document.addEventListener('mousemove', resetIdleTimer);
+    document.addEventListener('keydown', resetIdleTimer);
+    resetIdleTimer();
+</script>
+</body>
+</html>

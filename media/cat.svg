@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 70" width="100" height="60">
+    <style>
+        text {
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+        font-weight: bold;
+        fill: #1e2f3f; /* De donkerblauwe kleur uit je design */
+        white-space: pre;
+        }
+    </style>
+    <text x="10" y="20">  /\_/\  </text>
+    <text x="10" y="36"> ( o.o ) </text>
+    <text x="10" y="52">  &gt; ^ &lt;  </text>
+</svg>
