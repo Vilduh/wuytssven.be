@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://sitemaps.org">
     <url>
-        <loc>https://wuytssven.be</loc>
+        <loc>https://wuytssven.be/</loc>
         <lastmod>2026-11-13</lastmod>
     </url>
     <url>
-        <loc>https://wuytssven.beabout-me</loc>
+        <loc>https://wuytssven.be/about-me</loc>
         <lastmod>2026-11-13</lastmod>
     </url>
     <url>
-        <loc>https://wuytssven.beinternship</loc>
+        <loc>https://wuytssven.be/internship</loc>
         <lastmod>2026-11-13</lastmod>
     </url>
     <url>
-        <loc>https://wuytssven.beprojects</loc>
+        <loc>https://wuytssven.be/projects</loc>
         <lastmod>2026-11-13</lastmod>
     </url>
     <url>
-        <loc>https://wuytssven.becontact</loc>
+        <loc>https://wuytssven.be/contact</loc>
         <lastmod>2026-11-13</lastmod>
     </url>
 </urlset>
