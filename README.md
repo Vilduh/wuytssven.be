@@ -2,10 +2,20 @@
 
 Welkom bij de repository van mijn persoonlijke portfolio website. Deze website is gebouwd voor de opleiding Programmeren aan Thomas More.
 
-##  Live Demo
+## Live Demo
 De website is live te bekijken op: [https://wuytssven.be](https://wuytssven.be)
 
-##  Concept: "Cozy Terminal"
-De website heeft een uniek design dat ik "Cozy Terminal" noem. Het combineert de warme, uitnodigende sfeer van een ouderwetse bibliotheek (met een perkament-kleurig kleurenpalet) met de technische precisie van een developer-omgeving.
-*   **Typografie:** *Fraunces* (voor koppen), *Inter* (voor leesbare body tekst) en *Courier New* (voor de terminal-elementen en ASCII-kunst).
-*   **Details:** Het ontwerp bevat diverse "Easter Eggs", zoals een slapende ASCII-kat in de footer die wakker wordt bij een hover, en een kat in de hero-sectie die in slaap valt als je 20 seconden niets doet.
+## Concept: "Cozy Terminal"
+De website combineert de warme, uitnodigende sfeer van een ouderwetse bibliotheek (perkament-kleurig kleurenpalet) met de technische precisie van een developer-omgeving.
+
+## Gebruikte Technologieën
+* **HTML5:** Semantische structuur (`<header>`, `<main>`, `<article>`, etc.)
+* **CSS3:** Flexbox, CSS Grid, Custom Properties (`:root` variabelen), Fluid Typography (`clamp`), `calc()`.
+* **JavaScript:** DOM Manipulatie (idle timer voor de ASCII-kat).
+* **PHP:** Formulier validatie en Honeypot security.
+* **Server:** Apache (via `.htaccess` voor clean URLs).
+
+## Mappenstructuur
+* `/css` - Alle styling.
+* `/html` - De subpagina's (About, Projects, etc.).
+* `/media` - Afbeeldingen, SVG's en PDF-documenten.
